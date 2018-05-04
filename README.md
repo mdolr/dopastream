@@ -23,3 +23,7 @@ Equinoxbig - [Twitter @Equinoxbig](https://twitter.com/Equinoxbig) - BTC : 36JM7
 ## License
 
 Refer to the [LICENSE.md](https://github.com/Equinoxbig/dopastream/blob/master/LICENSE.md) file
+
+## Credit
+
+[Switch button on popup](https://codepen.io/aorcsik/pen/OPMyQp) - [Twitter @aorcsik](https://twitter.com/aorcsik)

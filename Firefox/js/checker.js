@@ -59,7 +59,11 @@ function createNotification() {
         isClickable: false
     };
 
-    browser.notifications.create('', notification);
+    browser.storage.local.get(['notifications'], function(res) {
+        if (res.notifications == 2) {
+            browser.notifications.create('', notification);
+        }
+    });
 }
 
 function getStream() {
@@ -88,3 +92,10 @@ function getStream() {
 
 getStream();
 setInterval(function() { getStream(); }, (300 * 1000));
+
+
+browser.storage.local.get(['notifications'], function(res) {
+    if (!res.notifications) {
+        browser.storage.local.set({ notifications: 2 });
+    }
+});
