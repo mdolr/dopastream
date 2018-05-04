@@ -1,0 +1,41 @@
+{
+    "extensionName": {
+        "message": "DopaStream",
+        "description": "Extension name on the store, don't change when translating"
+    },
+    "extensionShortName": {
+        "message": "DopaStream",
+        "description": "Extension name on the store, don't change when translating"
+    },
+    "extensionDescription": {
+        "message": "Receive a notification when Dopa starts streaming.",
+        "description": "Extension description on the store"
+    },
+
+    "notificationMessage": {
+        "message": "Dopa is now live !",
+        "description": "Notification message"
+    },
+    "watch": {
+        "message": "Watch",
+        "description": "Button to open a tab to the stream"
+    },
+    "dismiss": {
+        "message": "Dismiss",
+        "description": "Notification button to remove the notification"
+    },
+
+    "links": {
+        "message": "Channel / Social network links :",
+        "description": "Message on popup"
+    },
+
+    "on": {
+        "message": "ON",
+        "description": "Text on badge"
+    },
+    "off": {
+        "message": "OFF",
+        "description": "Text on badge"
+    }
+}

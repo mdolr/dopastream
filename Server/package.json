@@ -1,0 +1,14 @@
+{
+  "name": "dopastream-server",
+  "version": "0.1.0",
+  "description": "gets dopa's live status and then gives it on http requests",
+  "main": "main.js",
+  "repository": "https://github.com/Equinoxbig/dopastream",
+  "author": "Equinoxbig",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2"
+  }
+}
