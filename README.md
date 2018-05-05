@@ -10,7 +10,7 @@ if you'd like to translate it, fork the repo, create a folder in both
 
 This folder should be named after the locale's code see : https://developer.chrome.com/webstore/i18n?csw=1#localeTable
 Then copy messages.json from the `_locales/en` folder into the new folder and start translating the messages, don't touch the description it is not shown.
-Feel free to update this README to add yourself
+Feel free to update this README to add yourself.
 When you're done make a pull request to this repository.
 
 ## Contribution

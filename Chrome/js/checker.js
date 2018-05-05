@@ -45,12 +45,12 @@ function changeBadge(status) {
 changeBadge(statusDisplay.off);
 
 
-function createNotification() {
+function createNotification(title) {
     var notification = {
         type: 'basic',
         iconUrl: '../img/live_on.png',
         title: chrome.i18n.getMessage('notificationMessage'),
-        message: '\n',
+        message: chrome.i18n.getMessage('streamTitle') + title,
         buttons: [{
             title: chrome.i18n.getMessage('watch')
         }, {
@@ -75,11 +75,11 @@ function getStream() {
                     if (data.state != state) {
                         // if stream turns on
                         if (data.state) {
-                            stream = data.stream;
-                            createNotification();
+                            stream = 'https://tv.kakao.com' + data.link;
+                            createNotification(data.title);
                             changeBadge(statusDisplay.on);
-
-                        } // if stream turns off
+                        }
+                        // if stream turns off
                         else if (!data.state) {
                             changeBadge(statusDisplay.off);
                         }

@@ -24,10 +24,18 @@
         "message": "Ignorer",
         "description": "Notification button to remove the notification"
     },
+    "streamTitle": {
+        "message": "Titre du stream : ",
+        "description": "Notification stream title : ..."
+    },
 
     "links": {
         "message": "Liens chaines / réseaux sociaux :",
         "description": "Message on popup"
+    },
+    "notificationSwitch": {
+        "message": "Notifications navigateur",
+        "description": "Message on popup (switch for notifications)"
     },
 
     "on": {

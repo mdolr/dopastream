@@ -24,10 +24,18 @@
         "message": "Dismiss",
         "description": "Notification button to remove the notification"
     },
+    "streamTitle": {
+        "message": "Stream title : ",
+        "description": "Notification stream title : ..."
+    },
 
     "links": {
         "message": "Channel / Social network links :",
         "description": "Message on popup"
+    },
+    "notificationSwitch": {
+        "message": "Browser notifications",
+        "description": "Message on popup (switch for notifications)"
     },
 
     "on": {

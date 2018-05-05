@@ -1,14 +1,9 @@
 let stream = 'https://tv.kakao.com/channel/2781080';
 let state = false;
 
-// When a button is clicked
-browser.notifications.onButtonClicked.addListener(function(notifID, index) {
-    // Close the notification
+browser.notifications.onClicked.addListener(function(notifID) {
     browser.notifications.clear(notifID);
-    // If the watch button has been clicked open the stream.
-    if (!index) {
-        window.open(stream, '_blank');
-    }
+    browser.tabs.create({ url: stream });
 });
 
 // Badge styles
@@ -45,18 +40,12 @@ function changeBadge(status) {
 changeBadge(statusDisplay.off);
 
 
-function createNotification() {
+function createNotification(title) {
     var notification = {
         type: 'basic',
         iconUrl: '../img/live_on.png',
         title: browser.i18n.getMessage('notificationMessage'),
-        message: '\n',
-        buttons: [{
-            title: browser.i18n.getMessage('watch')
-        }, {
-            title: browser.i18n.getMessage('dismiss')
-        }],
-        isClickable: false
+        message: browser.i18n.getMessage('streamTitle') + title
     };
 
     browser.storage.local.get(['notifications'], function(res) {
@@ -75,11 +64,11 @@ function getStream() {
                     if (data.state != state) {
                         // if stream turns on
                         if (data.state) {
-                            stream = data.stream;
-                            createNotification();
+                            stream = 'https://tv.kakao.com' + data.link;
+                            createNotification(data.title);
                             changeBadge(statusDisplay.on);
-
-                        } // if stream turns off
+                        }
+                        // if stream turns off
                         else if (!data.state) {
                             changeBadge(statusDisplay.off);
                         }

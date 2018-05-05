@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('links').innerText = chrome.i18n.getMessage('links');
+    document.getElementById('notificationSwitch').innerText = chrome.i18n.getMessage('notificationSwitch');
 
     chrome.storage.local.get(['notifications'], function(res) {
         if (res.notifications == 2) {
